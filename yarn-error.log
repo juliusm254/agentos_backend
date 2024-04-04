@@ -1,0 +1,55 @@
+Arguments: 
+  /usr/local/share/nvm/versions/node/v18.18.0/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /var/home/jc/.local/share/pnpm:/var/home/jc/.yarn/bin:/var/home/jc/.local/bin:/var/home/jc/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/current/bin:/usr/local/hugo/bin:/usr/local/dotnet/current:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/rvm/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.18.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:108:26)
+
+npm manifest: 
+  {
+  	"name": "directus-monorepo",
+  	"private": true,
+  	"scripts": {
+  		"build": "pnpm --recursive --filter '!docs' run build",
+  		"format": "prettier --cache --check .",
+  		"lint": "eslint --cache .",
+  		"test": "pnpm --recursive --filter '!tests-blackbox' test",
+  		"test:blackbox": "pnpm --filter directus deploy --prod dist && pnpm --filter tests-blackbox test"
+  	},
+  	"devDependencies": {
+  		"@changesets/cli": "2.26.1",
+  		"@directus/release-notes-generator": "0.2.1",
+  		"@typescript-eslint/eslint-plugin": "6.7.3",
+  		"@typescript-eslint/parser": "6.7.3",
+  		"eslint": "8.40.0",
+  		"eslint-config-prettier": "8.8.0",
+  		"eslint-plugin-vue": "9.13.0",
+  		"prettier": "2.8.8"
+  	},
+  	"packageManager": "pnpm@8.8.0",
+  	"engines": {
+  		"node": ">=18.0.0",
+  		"pnpm": "~8.8.0"
+  	},
+  	"dependencies": {
+  		"isolated-vm": "^4.6.0"
+  	}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

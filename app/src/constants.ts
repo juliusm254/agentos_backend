@@ -39,6 +39,7 @@ export const COLLECTIONS_DENY_LIST = [
 ];
 
 export const MODULE_BAR_DEFAULT = [
+
 	{
 		type: 'module',
 		id: 'content',
@@ -70,6 +71,12 @@ export const MODULE_BAR_DEFAULT = [
 	{
 		type: 'module',
 		id: 'settings',
+		enabled: true,
+		locked: true,
+	},
+	{
+		type: 'module',
+		id: 'mycontent',
 		enabled: true,
 		locked: true,
 	},
